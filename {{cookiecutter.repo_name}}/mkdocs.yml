@@ -1,0 +1,45 @@
+site_name: {{cookiecutter.repo_name}}
+
+nav:
+  - Home: 
+    - Overview: index.md
+    - License: license.md
+  - Releases: 
+    - Changelog: releases/changelog.md
+    - Roadmap: releases/roadmap.md
+  
+theme:
+  name: "mkdocs"
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+  palette:
+    primary: white
+    accent: red
+  font:
+    text: Karla Regular
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: no
+            show_root_heading: yes
+          setup_commands:
+            - import sys
+            - sys.path.append("src")
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - toc:
+      permalink: true

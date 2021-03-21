@@ -1,0 +1,8 @@
+{
+    "full_name": "Joe Bloggs",
+    "email": "joe.blogs@mailserver.domain",
+    "repo_name": "pypackagetemplate",
+    "version": "0.0.1",
+    "repo_description": "A template for a python package."
+
+}
